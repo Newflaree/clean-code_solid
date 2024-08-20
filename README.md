@@ -69,3 +69,38 @@ Existen dos tipos de programadors. Los que ya han experimentado esto y los que e
 ```
 
 Cuando estamos hablando de código limpio, se procura que nuestro código sea universal y muy fácil de leer.
+
+## Nombres pronunciables y expresivos
+Los nombres de las variables imprescindiblemente tienen que estar escritas en inglés y deben ser pronunciables.
+```
+// Mal
+const n = 53;
+const tx = 0.15;
+const cat = 'T-Shirts';
+cosnt ddmmyyyy = new Date('August 15, 1965 00:00:00');
+```
+
+Los nombres de las Clases o Interfaces priorizan el uso de UpperCamelCase. Por otro lado, también debemos intentar no ahorrar carácteres en nombres y la idea que buscamos es que cada uno de esos nombres sean muy expresivos
+```
+// Mejor
+const numberOfUnits = 53;
+const tax = 0.15;
+const category = 'T-Shirts';
+cosnt birthDate = new Date('August 15, 1965 00:00:00');
+```
+
+## Ausencia de información técnica en los nombres
+Se refiere a la implentación que una Clase o una Interfaz está realizando.
+```
+// Mal
+class AbstractUser {};
+class UserMixin {};
+class UserImplementation {};
+interface UserInterface {};
+```
+
+```
+// Mejor
+class User {};
+interface User {};
+```
