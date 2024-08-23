@@ -104,3 +104,82 @@ interface UserInterface {};
 class User {};
 interface User {};
 ```
+
+## Nombres según tipo de dato
+Ahora vamos a revisar el nombre de las variables según en tipo de dato que contienen.
+### Arrays
+Usualmente, sabemos que es una lista iterable donde todos sus elementos tienen alguna característica en común, por lo cual pluralizar su nombre es una buena idea. Revisaremos algunos ejemplos.
+```
+// Malo
+const fruit = [ 'manzana', 'plátano', 'pera' ];
+```
+
+El código anterior es un mal ejemplo ya que, al leerlo sin observar el valor que tiene, se podría pensar que se habla de una sola fruta. Algo mejor podría ser:
+```
+// Regular
+const fruitList = [ 'manzana', 'plátano', 'pera' ];
+```
+
+El ejemplo anterior es un poco mejor sim embargo. El problema es que internamente no sabemos la especificación o la estructura de ese Array.
+```
+// Bueno
+const fruitNames = [ 'manzana', 'plátano', 'pera' ];
+```
+
+### Booleans
+Los Boolean, usualmente, tienen dos valores que son true o false. Dado esto, el uso de prefijos como is, has, can, puede ayudar mucho a que la variable tengo mucho más sentido semántico por si sola y mejorar. Para mejorar la legibilidad de este código, adicionalmente se procura que el resultado siempre sea positivo y evitar las negaciones en el nombre.
+```
+// Mal
+const open = true;
+const write = true;
+const fruit = true;
+const active = false;
+const noValues = true;
+const notEmpty = true;
+```
+
+```
+// Mejor
+const isOpen = true;
+const caWrite = true;
+const hasFruit = true;
+const isActive = false;
+const hasValues = false;
+const isEmpty = false;
+```
+
+### Numbers
+Con respecto a los números, son interesantes para escoger diferentes palabras ya que hay muchos términos que se pueden utilizar para nombrar variables numéricas.
+```
+// Malos
+const fruits = 3;
+const cars = 10;
+```
+
+```
+// Mejores
+const maxFruits = 5;
+const minFruits = 1;
+const totalFruits = 3;
+
+const totalOfCars = 10;
+```
+
+### Functions
+Las funciones, en general, tienen varias características interesantes dado que los nombres de las funciones deben de presentar acciones. Estos deben ser bien descriptivos y a su vez consisos, esto quiere decir que el nombre de la función debe expresar lo que hace específicamente pero, a la vez, abtenerce de toda la implementación que hace la función.
+```
+// Malos
+createUserIfNotExists();
+updateUserIfNotEmpty();
+sendEmailIfFieldsValid();
+```
+
+Adicionalmente, hay otro punto importante que tiene correspondencia al principio de responsabilidad única. Este principio dice que cada función debe hacer una cosa y debe hacerla bien.
+```
+// Mejor
+createUser();
+updateUser();
+sendEmailI();
+```
+
+
