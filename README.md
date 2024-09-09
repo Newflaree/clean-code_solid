@@ -183,3 +183,26 @@ sendEmailI();
 ```
 
 
+### Classes
+Las clases deben tener nombres formados por un sustantivo o frases de sustantivo. Debemos evitar nombres genéricos porque esto puede llevarnos a que las clases realicen demasiado trabajo o más trabajo que el que deberían de hacer.
+```
+// Malos
+class Manager {}
+class Data {}
+class Info {}
+class Individual {}
+class Processor {}
+class SpecialMonsterView {}
+```
+ 
+Los nombres anteriores se considerarían malos porque son muy genéricos. Usualmente, tenemos que tener en consideración lo siguiente: "El nombre de la clase es lo más importante de la misma" porque esto ayuda a darle un sentido lógico a su vida. Al tener un nombre muy genérico en una clase, vamos a terminar asignando muchas responsabilidades a la misma, por lo cuál va a ser difícil de mantener o de actualizar y eso es lo que estamos tratando de evitar. También se procura utilizar UpperCamelCase.
+
+Usualmente, para saber que un nombre es correcto en una clase podemos hacernos estas tres preguntas:
+* ¿Qué exactamente hace la clase?
+* ¿Cómo exactamente esta clase realiza cierta tarea?
+* ¿Hay algo específico sobre su ubicación?
+
+* Si algo no tiene sentido, remuévelo o refactoriza
+
+
+
